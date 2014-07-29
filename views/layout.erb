@@ -42,39 +42,10 @@
 
 <body>
 
-<% if is_admin? %>
-    <%= erb BSBar.bar(:mainBar) %>
-<% elsif current_user %>
-    <%= erb BSBar.bar(:mainBar) %>
-<% else %>
-    <%= erb BSBar.bar(:mainBar) %>
-<% end %>
 
 <div class="container">
 
-  <% # This is for flash, a really handy sinatra tool that uses sessions to give users messages which persist for one page load    %>
-  <% if flash[:info] %>
-      <div class="alert alert-info">
-        <button type="button" class="close" data-dismiss="alert">×</button> <%= flash[:info] %> </div>
-  <% end %>
-  <% if flash[:success] %>
-      <div class="alert alert-success">
-        <button type="button" class="close" data-dismiss="alert">×</button><%= flash[:success] %>  </div>
-  <% end %>
-  <% if flash[:error] %>
-      <% unless flash[:error]=='' or flash[:error]==nil or flash[:error]==[] %>
-          <div class="alert alert-danger">
-            <button type="button" class="close" data-dismiss="alert">×</button> <%= flash[:error] %> </div>
-      <% else #There was, at one point, a way for an empty error to occur. It's since been fixed (I hope), but this contingency remains just in case.    %>
-          <div class="alert alert-danger">
-            <button type="button" class="close" data-dismiss="alert">×</button>
-            <strong> Unknown Error.</strong> It appears that an operation failed, but no error message was generated.
-            Please contact site admin.
-          </div>
-      <% end %>
-  <% end %>
 
-  <%= yield %>
 
   <hr/>
   <footer>
