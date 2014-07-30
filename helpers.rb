@@ -8,6 +8,10 @@ helpers do
   include Rack::Utils
   alias_method :h, :escape_html
 
+  def html(filename)
+    send_file "./views/#{filename.to_s}.html"
+  end
+
   # Convert a hash to a querystring for form population   #not used
   def hash_to_query_string(hash)
     hash.delete 'password'
