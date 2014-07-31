@@ -1,5 +1,8 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+
 body {
-    padding: 5%;
+    margin: 5%;
+    font-family: 'Open Sans' 'Helvetica Neue' Helvetica, sans-serif;
 }
 
 footer {
@@ -147,8 +150,8 @@ dd {
 }
 
 .starburst a {
-    margin-bottom: 0px;
-    color: white; ;
+    margin-bottom: 0;
+    color: white;
 }
 
 .post-entry h1 span,
@@ -240,3 +243,9 @@ h3 .btn-circle {
     position: relative;
     top: -2px;
 }
+
+.panel.detail {
+    width: 800px;
+    height: 500px;
+}
+
