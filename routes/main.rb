@@ -1,3 +1,3 @@
 get '/' do
-  html :index
+  html :home
 end

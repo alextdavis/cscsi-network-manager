@@ -133,4 +133,8 @@ helpers do
     $blog_cache[id] = rendered
   end
 
+	def info(text, title: nil, direction: "top")
+		%(<button class="btn btn-link" data-toggle="popover" data-trigger="hover" data-title="#{title}" data-placement="#{direction}" data-content="#{text}"><i class="fa fa-info-circle info"></i></button>)
+	end
+
 end
