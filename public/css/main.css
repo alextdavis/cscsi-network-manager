@@ -249,3 +249,13 @@ h3 .btn-circle {
     height: 500px;
 }
 
+.small-container {
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: justify;
+}
+
+.small-list {
+    margin-left: 25%;
+    font-size: 13px;
+}
