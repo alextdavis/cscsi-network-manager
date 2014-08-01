@@ -42,17 +42,27 @@
 
 <body>
 
-    <div class="panel panel-default detail">
-        <div class="panel-heading"><h3 class="panel-title">Device Detail <span class="close">&times;</span></h3></div>
-        <div class="panel-body">
-            <h4>John's iPhone <button class="btn btn-danger">Ban</button><%= info "Hardware Address" %></h4>
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="font-size: 30pt">
+  <i class="fa fa-mobile"></i>
+</button>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Device Detail</h4>
+      </div>
+      <div class="modal-body">
+            <h4>John's iPhone <button class="btn btn-danger btn-sm">Ban</button><%= info "Hardware Address" %></h4>
           <p>Signal Strength: <%= badge :green %> Excellent<%= info("This is good") %></p>
           <p>Data Loss: <%= badge :yellow %> 4%<%= info("This is meh") %></p>
           <p>Connection Latency: <%= badge :red %> Excellent<%= info("This is bad") %></p>
           <hr>
           <p><input type="checkbox" onclick="alert('do something')"> Enable Parental Controls <a href="/parental" class="btn btn-default">Configure Parental Controls</a></p>
-        </div>
+      </div>
     </div>
+  </div>
+</div>
 
     <script>$(".pop").popover()</script>
     <hr/>
