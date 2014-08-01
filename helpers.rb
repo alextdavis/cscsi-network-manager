@@ -133,8 +133,12 @@ helpers do
     $blog_cache[id] = rendered
   end
 
-	def info(text, title: nil, direction: "top")
-		%(<button class="btn btn-link" data-toggle="popover" data-trigger="hover" data-title="#{title}" data-placement="#{direction}" data-content="#{text}"><i class="fa fa-info-circle info"></i></button>)
-	end
+	def info(text, title: nil, direction: "right")
+		%(<button class="btn btn-link pop" data-toggle="popover" data-trigger="hover" data-title="#{title}" data-placement="#{direction}" data-content="#{text}"><i class="fa fa-info-circle info"></i></button>)
+  end
+
+  def badge(color)
+    %(<span class="badge badge-#{color.to_s}">&nbsp;</span>)
+  end
 
 end

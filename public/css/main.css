@@ -17,6 +17,20 @@ dd {
     margin-left: 5px;
 }
 
+.badge-red {
+    background-color: #b94a48;
+}
+.badge-yellow {
+    background-color: #f89406;
+}
+.badge-green {
+    background-color: #468847;
+}
+
+.btn.pop {
+    padding: 6px 4px;
+}
+
 .btn-circle {
     width: 20px;
     height: 20px;
@@ -39,7 +53,7 @@ h3 .btn-circle {
 
 .panel.detail {
     width: 800px;
-    height: 500px;
+    /*height: 500px;*/
 }
 
 .small-container {

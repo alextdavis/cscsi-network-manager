@@ -16,7 +16,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
-    <script src="/js/main.js"></script>
+    <!--<script src="/js/main.js"></script>-->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -45,13 +45,16 @@
     <div class="panel panel-default detail">
         <div class="panel-heading"><h3 class="panel-title">Device Detail <span class="close">&times;</span></h3></div>
         <div class="panel-body">
-            <h4>John's iPhone <button class="btn btn-link" data-toggle="popover"><i class="fa fa-info-circle info"></i></button> <button class="btn btn-danger">Ban</button></h4>
-            <button class="btn btn-success btn-xs" style="position:relative;top:-4px;">
-                <i class="fa fa-eye-slash"></i></button>
+            <h4>John's iPhone <button class="btn btn-danger">Ban</button><%= info "Hardware Address" %></h4>
+          <p>Signal Strength: <%= badge :green %> Excellent<%= info("This is good") %></p>
+          <p>Data Loss: <%= badge :yellow %> 4%<%= info("This is meh") %></p>
+          <p>Connection Latency: <%= badge :red %> Excellent<%= info("This is bad") %></p>
+          <hr>
+          <p><input type="checkbox" onclick="alert('do something')"> Enable Parental Controls <a href="/parental" class="btn btn-default">Configure Parental Controls</a></p>
         </div>
     </div>
 
-
+    <script>$(".pop").popover()</script>
     <hr/>
     <footer>
         <p>&copy; Douglass Boshkoff, Alex Davis, and Sebastian Eising 2014</p>
