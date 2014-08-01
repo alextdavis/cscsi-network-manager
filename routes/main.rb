@@ -3,13 +3,13 @@ get '/' do
 end
 
 get '/network' do
-  html :network
+  erb :network
 end
 
 get '/first' do
-  html "MHN-firstsetup"
+  erb "MHN-firstsetup"
 end
 
 get '/router' do
-  html "MHN-topologyrouter"
+  erb "MHN-topologyrouter"
 end
