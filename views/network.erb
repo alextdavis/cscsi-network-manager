@@ -1,0 +1,82 @@
+<div class="panel panel-default detail">
+  <div class="panel-heading"><h3 class="panel-title">Router<span class="close">&times;</span></h3></div>
+  <div class="panel-body">
+    <div class="tabbable tabs-left">
+      <ul class="nav nav-tabs">
+        <li><a href="#a" data-toggle="tab">Status</a></li>
+        <li class="active"><a href="#b" data-toggle="tab">Security</a></li>
+        <li><a href="#c" data-toggle="tab">Ban List</a></li>
+      </ul>
+      <div class="col-sm-10">
+        <div class="tab-content">
+          <div class="tab-pane active" id="a">
+            Network Name: <input type="text" name="networkname">
+            <i class="fa fa-info-circle"></i>
+            <br><br>
+            Status Alerts: <em>None</em>
+            <br><br>
+            Download Speed: 15 mbs
+            <i class="fa fa-info-circle"></i>
+            <br><br>
+            Upload Speed: 2.5 mbs
+            <i class="fa fa-info-circle"></i>
+          </div>
+          <div class="tab-pane" id="b">
+            <div class="small-container">
+              <p>We highly recommend securing your network. On <em>My Home Network</em>, you get three
+                options
+                when it comes to security. The "Old Security" option is available for a small set of
+                users
+                with devices that won't work with the newer, safer technologies behind the the "Best
+                Security" option. If you are unsure, try "Best Security" first and try connecting,
+                you can
+                always downgrade later.</p>
+
+              <form action="/security" method="post">
+                <select name="type">
+                  <option>Best (WPA/WPA2 Personal)</option>
+                  <option>Old (WEP)</option>
+                  <option>None</option>
+                </select>
+                <input type="submit" class="btn btn-success" value="Save">
+              </form>
+            </div>
+          </div>
+          <div class="tab-pane" id="c">
+
+            <div style="display:block">
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Banned On</th>
+                  <th>Reason</th>
+                  <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>Trac-X15</td>
+                  <td>21 June</td>
+                  <td>Not mine</td>
+                  <td>
+                    <button class="btn btn-warning btn-xs">Pardon</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>not-the-nsa</td>
+                  <td>1 Sept</td>
+                  <td>Definitely the NSA</td>
+                  <td>
+                    <button class="btn btn-warning btn-xs">Pardon</button>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
