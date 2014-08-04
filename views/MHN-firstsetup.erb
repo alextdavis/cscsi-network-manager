@@ -6,18 +6,18 @@
   <p><b>Name your network:</b> this will allow you identify <em>your</em> network when you are trying to connect from a
     wireless device. Beware! This name can be seen by anyone nearby.</p>
 
-  <form action="">
-    <input placeholder="Network Name" type="text" name="networkname">
+  <form action="/first/password" method="get">
+    <input class="form-control" placeholder="Network Name" type="text" name="networkname">
   </form>
   <br>
 
   <p><b>Create a network password:</b> this password will be used for securely connecting devices to your network. Keep
     this password safe and only give it to people you can trust.</p>
 
-  <form action="">
-    <input placeholder="Network Password" type="password" name="networkpassword">
+  <form action="/first/password">
+    <input class="form-control" placeholder="Network Password" type="password" name="networkpassword">
     <br><br>
-    <input placeholder="Confirm Network Password" type="password" name="confirmnetworkpassword">
+    <input class="form-control" placeholder="Confirm Network Password" type="password" name="confirmnetworkpassword">
     <br><br>
     <button type="submit" class="btn btn-success"> Continue <i class="fa fa-arrow-right"></i></button>
   </form>

@@ -62,6 +62,30 @@ h3 .btn-circle {
     text-align: justify;
 }
 
+.med-container {
+     margin-left: 15%;
+     margin-right: 15%;
+     text-align: justify;
+ }
+
+@media (max-width: 700px) {
+    .small-container {
+        margin-left: 3%;
+        margin-right: 3%;
+        text-align: left;
+    }
+
+    .med-container {
+        margin-left: 3%;
+        margin-right: 3%;
+        text-align: left;
+    }
+    .admin-login {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
 .small-list {
     margin-left: 25%;
     font-size: 13px;

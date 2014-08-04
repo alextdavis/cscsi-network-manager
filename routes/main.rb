@@ -7,9 +7,21 @@ get '/network' do
 end
 
 get '/first' do
-  erb "MHN-firstsetup"
+  redirect '/first/network'
 end
 
-get '/router' do
-  erb "MHN-topologyrouter"
+get '/first/network' do
+  erb "MHN-firstsetup".to_sym
+end
+
+get '/first/info' do
+  erb "MHN-firsttimeinfo".to_sym
+end
+
+get '/login' do
+  erb "MHN-adminlogin".to_sym
+end
+
+get '/first/password' do
+  erb "MHN-adminpass".to_sym
 end

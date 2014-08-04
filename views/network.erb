@@ -3,26 +3,21 @@
   <div class="panel-body">
     <div class="tabbable tabs-left">
       <ul class="nav nav-tabs">
-        <li><a href="#a" data-toggle="tab">Status</a></li>
-        <li class="active"><a href="#b" data-toggle="tab">Security</a></li>
+        <li class="active"><a href="#a" data-toggle="tab">Status</a></li>
+        <li><a href="#b" data-toggle="tab">Security</a></li>
         <li><a href="#c" data-toggle="tab">Ban List</a></li>
       </ul>
       <div class="col-sm-10">
         <div class="tab-content">
           <div class="tab-pane active" id="a">
-            Network Name: <input type="text" name="networkname">
-            <i class="fa fa-info-circle"></i>
-            <br><br>
-            Status Alerts: <em>None</em>
-            <br><br>
-            Download Speed: 15 mbs
-            <i class="fa fa-info-circle"></i>
-            <br><br>
-            Upload Speed: 2.5 mbs
-            <i class="fa fa-info-circle"></i>
+            <p>Network Name: <input type="text" name="networkname" value="GardyNet"><%= info "gardy" %></p>
+            <p>Status Alerts: <em>None</em></p>
+            <p>Download Speed: 15 Mb/s <%= info "download speed" %></p>
+            <p>Upload Speed: 2.5 Mb/s <%= info "upload speed" %></p>
+            <!--<button class="btn btn-default">Start Speed Test</button>-->
           </div>
           <div class="tab-pane" id="b">
-            <div class="small-container">
+            <div class="med-container">
               <p>We highly recommend securing your network. On <em>My Home Network</em>, you get three
                 options
                 when it comes to security. The "Old Security" option is available for a small set of
