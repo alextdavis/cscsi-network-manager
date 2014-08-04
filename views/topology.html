@@ -1,4 +1,4 @@
-<html>  
+<html>
 <head>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
@@ -7,7 +7,7 @@
 <style>
 h2 {
 	text-align: "center";
-	
+
 }
 
 body, html {
@@ -24,7 +24,7 @@ body, html {
 	padding:0
 	position:relative;
 	display:block;
-	
+
 }
 
 .footer {
@@ -33,7 +33,7 @@ body, html {
 	background-color:black;
 	display:block;
 }
-#header { 
+#header {
 	height:100px;
 	width:100%;
 	background-color:red;
@@ -88,44 +88,56 @@ img {
 <div id="header"><h2>My Network Manager</h2> </div>
 <div id="canvas">
 		<div class="device" id="desktop">
-			<img src="../public/images/windowsDesktop(small).png"/>
+            <figure>
+			    <img src="../public/images/windowsDesktop(small).png"/>
+                <figcaption>Small Windows Desktop</figcaption>
+            </figure>
 		</div>
 		<div class="device" id="router">
-			<img src="../public/images/DLinkRouter.png"/>
+            <figure>
+			    <img src="../public/images/DLinkRouter.png"/>
+                <figcaption>D-Link Router</figcaption>
+            </figure>
 		</div>
-				
+
 		<div class="device" id="air">
-			<img src="../public/images/macbookAir(small).png"/>
+            <figure>
+    			<img src="../public/images/macbookAir(small).png"/>
+                <figcaption>MacBook Air</figcaption>
+            </figure>
 		</div>
 		<div class="device" id="iphone">
-			<img src="../public/images/iPhone(small).png"/>
+            <figure>
+            <img src="../public/images/iPhone(small).png"/>
+                <figcaption>iPhone</figcaption>
+            </figure>
 		</div>
-		
+
 		<div class="device" id="gaming">
 			<img src="../public/images/gamingDevice.png"/>
 		</div>
-		
+
 </div>
 
 	<div class="footer"></div>
 </body>
-  
-  
+
+
 <script>
 
 jsPlumb.ready(function() {
 
 jsPlumb.connect({
-	source:"desktop", 
+	source:"desktop",
     target:"router",
     anchors:["BottomCenter", "Right" ],
     endpoint:"Blank",
 	paintStyle:{ strokeStyle:"Grey", lineWidth:3, dashstyle:"2 4" },
 	endpointStyle:{ fillStyle:"Grey", outlineColor:"Grey", outlineWidth:1 },
-  });   
-  
+  });
+
 jsPlumb.connect({
-	source:"air", 
+	source:"air",
     target:"router",
     anchors:["BottomCenter", "Left" ],
 	paintStyle:{ strokeStyle:"Grey", lineWidth:3, dashstyle:"2 4" },
@@ -134,22 +146,22 @@ jsPlumb.connect({
  });
 
 jsPlumb.connect({
-	source:"gaming", 
+	source:"gaming",
     target:"router",
     anchors:["BottomCenter", "Left" ],
 	paintStyle:{ strokeStyle:"Grey", lineWidth:3 },
 	endpointStyle:{ fillStyle:"Grey", outlineColor:"Grey", outlineWidth:1 },
     endpoint:"Blank",
- });  
- 
+ });
+
  jsPlumb.connect({
-	source:"iphone", 
+	source:"iphone",
     target:"router",
     anchors:["BottomCenter", "Right" ],
 	paintStyle:{ strokeStyle:"Grey", lineWidth:3 },
 	endpointStyle:{ fillStyle:"Grey", outlineColor:"Grey", outlineWidth:1 },
     endpoint:"Blank",
- });  
+ });
 });
 </script>
 
