@@ -2,6 +2,10 @@ get '/' do
   erb :home
 end
 
+get '/top' do
+  html :topology
+end
+
 get '/network' do
   erb :network
 end
