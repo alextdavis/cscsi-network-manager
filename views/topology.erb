@@ -1,5 +1,5 @@
 <div id="header"><h2>My Network Manager</h2></div>
-<div id="canvas">
+<div id="main">
     <div class="device" id="desktop" data-mid="win">
         <figure>
             <img src="/images/windowsDesktop(small).png"/>
@@ -155,7 +155,7 @@
             source: "air",
             target: "router",
             anchors: ["BottomCenter", "Left" ],
-            paintStyle: { strokeStyle: "Grey", lineWidth: 3, dashstyle: "2 4" },
+            paintStyle: { strokeStyle: "Grey", lineWidth: 3},
             endpointStyle: { fillStyle: "Grey", outlineColor: "Grey", outlineWidth: 1 },
             endpoint: "Blank",
         });
@@ -173,7 +173,7 @@
             source: "iphone",
             target: "router",
             anchors: ["BottomCenter", "Right" ],
-            paintStyle: { strokeStyle: "Grey", lineWidth: 3 },
+            paintStyle: { strokeStyle: "Grey", lineWidth: 3, dashstyle: "2 4"},
             endpointStyle: { fillStyle: "Grey", outlineColor: "Grey", outlineWidth: 1 },
             endpoint: "Blank",
         });
