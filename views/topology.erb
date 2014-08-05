@@ -41,7 +41,94 @@
 <%= partial :device, {:locals => {:modal_id => "win", :device_name => "Tad's Tower", :signal_strength => :green, :data_loss => 1, :ping => 3, :parent_enabled => false}} %>
 <%= partial :device, {:locals => {:modal_id => "ps2", :device_name => "Jimmy's Console", :signal_strength => :yellow, :data_loss => 3, :ping => 4, :parent_enabled => false}} %>
 
-<%= partial :router, {:locals => {:modal_id => "router", :network_name => "GardyNet"}} %>
+<!--< %= partial :router, {:locals => {:modal_id => "router", :network_name => "GardyNet", :speed_up => 12, :speed_down => 43}} %>-->
+
+
+<div class="modal fade" id="router" tabindex="-1" role="dialog" aria-labelledby="routerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Router</h4>
+      </div>
+      <div class="modal-body">
+        <div class="tabbable tabs-left">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#a" data-toggle="tab">Status</a></li>
+            <li><a href="#b" data-toggle="tab">Security</a></li>
+            <li><a href="#c" data-toggle="tab">Ban List</a></li>
+          </ul>
+          <div style="padding-left:100px">
+            <div class="tab-content">
+              <div class="tab-pane active" id="a">
+                <p>Network Name: <input type="text" name="networkname" value="GardyNet"><%= info "gardy" %></p>
+
+                <p>Status Alerts: <em>None</em></p>
+
+                <p>Download Speed: 15 Mb/s <%= info "download speed" %></p>
+
+                <p>Upload Speed: 2.5 Mb/s <%= info "upload speed" %></p>
+                <button class="btn btn-default">Start Speed Test</button>
+              </div>
+              <div class="tab-pane" id="b">
+                <div class="med-hcontainer">
+                  <p>We highly recommend securing your network. On <em>My Home Network</em>, you get three
+                    options
+                    when it comes to security. The "Old Security" option is available for a small set of
+                    users
+                    with devices that won't work with the newer, safer technologies behind the the "Best
+                    Security" option. If you are unsure, try "Best Security" first and try connecting,
+                    you can
+                    always downgrade later.</p>
+
+                  <form action="/security" method="post">
+                    <select name="type">
+                      <option>Best (WPA/WPA2 Personal)</option>
+                      <option>Old (WEP)</option>
+                      <option>None</option>
+                    </select>
+                    <input type="submit" class="btn btn-success" value="Save">
+                  </form>
+                </div>
+              </div>
+              <div class="tab-pane" id="c">
+                <table class="table table-striped" style="width:99%">
+                  <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Banned On</th>
+                    <th>Reason</th>
+                    <th></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>Trac-X15</td>
+                    <td>21 June</td>
+                    <td>Not mine</td>
+                    <td>
+                      <button class="btn btn-warning btn-xs">Pardon</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>not-the-nsa</td>
+                    <td>1 Sept</td>
+                    <td>Definitely the NSA</td>
+                    <td>
+                      <button class="btn btn-warning btn-xs">Pardon</button>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!--modal_id device_name signal_strength(:green, :yellow, :red) data_loss ping parent_enabled-->
 <script>
