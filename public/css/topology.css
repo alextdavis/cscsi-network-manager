@@ -22,38 +22,36 @@ h2 {
 .device {
 
     margin-bottom: 20px;
-    margin: auto;
     position: absolute;
     display: block;
 }
 
 img {
     display: block;
-    align: middle;
 }
 
 #router {
     display: inline-block;
-    margin: 450px 350px 0px 350px;
+    margin: 450px 0px 0px 50%;
     padding: 10px;
 }
 
 #air {
     display: inline;
-    margin: 250px 0px 0px 100px;
+    margin: 250px 0px 0px 20%;
 }
 
 #desktop {
     display: inline;
-    margin: 250px 0px 0px 600px;
+    margin: 250px 0px 0px 80%;
 }
 
 #iphone {
     display: inline;
-    margin: 50px 0px 0px 500px;
+    margin: 50px 0px 0px 65%;
 }
 
 #gaming {
     display: inline;
-    margin: 50px 0px 0px 200px;
+    margin: 50px 0px 0px 35%;
 }
