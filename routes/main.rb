@@ -29,3 +29,7 @@ end
 get '/login' do
   erb "MHN-adminlogin".to_sym
 end
+
+get '/parental' do
+  erb :parental
+end
