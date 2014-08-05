@@ -8,8 +8,8 @@
       <div class="modal-body">
         <h4><%= device_name %> <button class="btn btn-danger btn-sm">Ban</button> <%= info "Hardware Address" %></h4>
         <p>Signal Strength: <%= badge signal_strength %> <%= case signal_strength when :green then "Excellent" when :yellow then "Fair" when :red then "Poor" end %><%= info("This is good") %></p>
-        <p>Data Loss: <%= badge if data_loss<2 then :green elsif data_loss<10 then :yellow else :red end %> <%= data_loss %>%<%= info("This is meh") %></p>
-        <p>Connection Latency: <%= badge if ping<10 then :green elsif ping<40 then :yellow else :red end %> <%= ping %> miliseconds<%= info("This is bad") %></p>
+        <p>Data Loss: <%= badge(if data_loss<2 then :green elsif data_loss<10 then :yellow else :red end)  %> <%= data_loss %>%<%= info("This is meh") %></p>
+        <p>Connection Latency: <%= badge(if ping<10 then :green elsif ping<40 then :yellow else :red end)  %> <%= ping %> miliseconds<%= info("This is bad") %></p>
         <hr>
         <p><input type="checkbox" onclick="alert('do something')" <%= 'checked' if parent_enabled %>> Enable Parental Controls <a href="/parental" class="btn btn-default" >Configure Parental Controls</a></p>
       </div>

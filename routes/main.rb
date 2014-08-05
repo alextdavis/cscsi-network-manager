@@ -3,7 +3,7 @@ get '/' do
 end
 
 get '/top' do
-  html :topology
+  erb :topology
 end
 
 get '/network' do

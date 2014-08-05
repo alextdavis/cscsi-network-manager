@@ -127,12 +127,6 @@ helpers do
     end
   end
 
-  def glorify_blog(id, text, options = {})
-    return $blog_cache[id] if $blog_cache[id]
-    rendered        = Sinatra::Glorify::Renderer.new(options).parse(text.force_encoding('UTF-8'))
-    $blog_cache[id] = rendered
-  end
-
 	def info(text, title: nil, direction: "right")
 		%(<button class="btn btn-link pop" data-toggle="popover" data-trigger="hover" data-title="#{title}" data-placement="#{direction}" data-content="#{text}"><i class="fa fa-info-circle info"></i></button>)
   end

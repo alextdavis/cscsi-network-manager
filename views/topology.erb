@@ -1,55 +1,57 @@
-<html>
-<head>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-    <script src="../public/js/jquery.jsPlumb-1.4.1-all.js"></script>
-    <script src="/js/jquery.jsPlumb-1.4.1-all.js"></script>
-    <link href="/css/main.css" rel="stylesheet">
-    <link href="/css/topology.css" rel="stylesheet">
-    <link href="../public/css/main.css" rel="stylesheet">
-    <link href="../public/css/topology.css" rel="stylesheet">
-</head>
-
-
-<body>
 <div id="header"><h2>My Network Manager</h2></div>
 <div id="canvas">
-    <div class="device" id="desktop">
+    <div class="device" id="desktop" data-mid="win">
         <figure>
-            <img src="../public/images/windowsDesktop(small).png"/>
+            <img src="/images/windowsDesktop(small).png"/>
             <figcaption>Small Windows Desktop</figcaption>
         </figure>
     </div>
-    <div class="device" id="router">
+    <div class="device" id="router" data-mid="router">
         <figure>
-            <img src="../public/images/DLinkRouter.png"/>
+            <img src="/images/DLinkRouter.png"/>
             <figcaption>D-Link Router</figcaption>
         </figure>
     </div>
 
-    <div class="device" id="air">
+    <div class="device" id="air" data-mid="mba">
         <figure>
-            <img src="../public/images/macbookAir(small).png"/>
+            <img src="/images/macbookAir(small).png"/>
             <figcaption>MacBook Air</figcaption>
         </figure>
     </div>
-    <div class="device" id="iphone">
+    <div class="device" id="iphone" data-mid="iph">
         <figure>
-            <img src="../public/images/iPhone(small).png"/>
+            <img src="/images/iPhone(small).png"/>
             <figcaption>iPhone</figcaption>
         </figure>
     </div>
 
-    <div class="device" id="gaming">
-        <img src="../public/images/gamingDevice.png"/>
+    <div class="device" id="gaming" data-mid="ps2">
+        <img src="/images/gamingDevice.png"/>
     </div>
 
 </div>
 
-</body>
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#firstModal" style="font-size: 30pt">
+  <i class="fa fa-mobile"></i>
+</button>
 
+<%= partial :device, {:locals => {:modal_id => "iph", :device_name => "Frank's iPhone", :signal_strength => :green, :data_loss => 4, :ping => 7, :parent_enabled => true}} %>
+<%= partial :device, {:locals => {:modal_id => "mba", :device_name => "Jane's MacBook Air", :signal_strength => :yellow, :data_loss => 2, :ping => 72, :parent_enabled => true}} %>
+<%= partial :device, {:locals => {:modal_id => "win", :device_name => "Tad's Tower", :signal_strength => :green, :data_loss => 1, :ping => 3, :parent_enabled => false}} %>
+<%= partial :device, {:locals => {:modal_id => "ps2", :device_name => "Jimmy's Console", :signal_strength => :yellow, :data_loss => 3, :ping => 4, :parent_enabled => false}} %>
 
+<%= partial :router, {:locals => {:modal_id => "router", :network_name => "GardyNet"}} %>
+
+<!--modal_id device_name signal_strength(:green, :yellow, :red) data_loss ping parent_enabled-->
 <script>
+    $(function() {
+        $(".device").click(function() {
+            var mid = $(this).data("mid");
+            $("#" + mid).modal();
+        })
+
+    })
 
     jsPlumb.ready(function () {
 
@@ -90,6 +92,3 @@
         });
     });
 </script>
-
-
-</html>
