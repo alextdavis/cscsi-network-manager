@@ -14,6 +14,7 @@ end
 puts 'STARTING!!!'
 
 require './helpers'
+require 'sinatra/cookies'
 # require './models'
 Dir['./routes/*.rb'].each { |file| require file }
 

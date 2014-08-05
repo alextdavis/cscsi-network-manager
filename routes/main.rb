@@ -1,13 +1,13 @@
 get '/' do
-  erb :home
-end
-
-get '/top' do
+  unless cookies[:return]
+    cookies[:return] = 'true'
+    redirect '/first'
+  end
   erb :topology
 end
 
-get '/network' do
-  erb :network
+get '/top' do
+  redirect '/'
 end
 
 get '/first' do
@@ -22,10 +22,10 @@ get '/first/info' do
   erb "MHN-firsttimeinfo".to_sym
 end
 
-get '/login' do
-  erb "MHN-adminlogin".to_sym
-end
-
 get '/first/password' do
   erb "MHN-adminpass".to_sym
+end
+
+get '/login' do
+  erb "MHN-adminlogin".to_sym
 end
