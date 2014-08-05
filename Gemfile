@@ -17,8 +17,8 @@ gem 'rake'
 # group :production do
 # 	gem 'pg'
 # 	gem 'dm-postgres-adapter'
-	gem 'thin'
-end
+
+gem 'thin'
 
 # gem 'dm-sanitizer'
 gem 'bcrypt'
