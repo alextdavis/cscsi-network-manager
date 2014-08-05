@@ -14,7 +14,7 @@ end
 puts 'STARTING!!!'
 
 require './helpers'
-require './models'
+# require './models'
 Dir['./routes/*.rb'].each { |file| require file }
 
 run Sinatra::Application
