@@ -1,108 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Home Network Manager</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="It's a Home Network Manager">
-  <meta name="author" content="Alex Davis">
-
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
-  <link href="/css/main.css" rel="stylesheet">
-  <link href="/css/tabs.css" rel="stylesheet">
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-
-  <script src="/js/main.js"></script>
-
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-  <link href="//netdna.bootstrapcdn.com/respond-proxy.html" id="respond-proxy" rel="respond-proxy"/>
-  <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect"/>
-
-  <script src="//cdn.jsdelivr.net/html5shiv/3.7.1/html5shiv.min.js"></script>
-  <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
-  <script src="/respond.proxy.js"></script>
-  <![endif]-->
-</head>
-
-<body>
 <h1>My Home Network</h1>
 <div class="tabbable tabs-left">
-      <ul class="nav nav-tabs">
-        <li class="active"><a href="#a" data-toggle="tab">John's iPhone</a></li>
-        <li><a href="#b" data-toggle="tab">Kate's iPad</a></li>
-        <li><a href="#c" data-toggle="tab">Tad's Tower</a></li>
-      </ul>
-      <div class="col-sm-10">
-        <div class="tab-content">
-          <div class="tab-pane active" id="a">
-            
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#a" data-toggle="tab">John's iPhone</a></li>
+    <li><a href="#b" data-toggle="tab">Kate's iPad</a></li>
+    <li><a href="#c" data-toggle="tab">Tad's Tower</a></li>
+  </ul>
+  <div style="padding-left: 140px;">
+    <div class="tab-content">
+      <div class="tab-pane active" id="a">
+        <div class="row">
+          <div class="col-md-5">
+            <h4>Allowed Genres</h4>
+            <select multiple class="form-control">
+              <option>News</option>
+              <option>Video</option>
+              <option>Games</option>
+              <option>Education</option>
+              <option>Travel</option>
+            </select>
           </div>
-          <div class="tab-pane" id="b">
-           
+          <div class="col-md-5">
+            <h4>Forbidden Genres</h4>
+            <select multiple class="form-control">
+              <option>Pornography</option>
+              <option>Drugs</option>
+              <option>Violence</option>
+              <option>Malware</option>
+            </select>
           </div>
-          <div class="tab-pane" id="c">
-              <div class="row">
-                <div class="col-sm-6">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Allowed Genres</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>News</td>
-                                </tr>
-                                <tr>
-                                    <td>Video</td>
-                                </tr>
-                                <tr>
-                                    <td>Games</td>
-                                <tr>
-                                    <td>Education</td>
-                                </tr>
-                                <tr>
-                                    <td>Travel</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                <div class="col-sm-6">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Banned Genres</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Pornography</td>
-                                </tr>
-                                <tr>
-                                    <td>Drugs</td>
-                                </tr>
-                                <tr>
-                                    <td>Violence</td>
-                                <tr>
-                                    <td>Malware</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                </div>
-              </div>
+        </div>
+        <h3>Exceptions <%= info "This allows you to control access to specific sites. For example, you may find that a site that is okay is blocked for being part of an undesired category. Or, there may be an undesirable site which is not categorized at all." %></h3>
+        <div class="row">
+          <div class="col-md-5">
+            <h4>Allowed Sites</h4>
+            <select multiple class="form-control">
+              <option>News</option>
+              <option>Video</option>
+              <option>Games</option>
+              <option>Education</option>
+              <option>Travel</option>
+            </select>
+          </div>
+          <div class="col-md-5">
+            <h4>Forbidden Sites</h4>
+            <select multiple class="form-control">
+              <option>Pornography</option>
+              <option>Drugs</option>
+              <option>Violence</option>
+              <option>Malware</option>
+            </select>
           </div>
         </div>
       </div>
+      <div class="tab-pane" id="b">
+
+      </div>
+      <div class="tab-pane" id="c">
+
+      </div>
     </div>
-<hr/>
-<footer>
-  <p>&copy; Douglass Boshkoff, Alex Davis, and Sebastian Eising 2014</p>
-</footer>
-</body>
-</html>
+  </div>
+</div>
