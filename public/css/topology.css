@@ -32,26 +32,26 @@ img {
 
 #router {
     display: inline-block;
-    margin: 450px 0px 0px 50%;
+    margin: 30% 0% 0% 36%;
     padding: 10px;
 }
 
 #air {
     display: inline;
-    margin: 250px 0px 0px 20%;
+    margin: 250px 0px 0px 10%;
 }
 
 #desktop {
     display: inline;
-    margin: 250px 0px 0px 80%;
+    margin: 250px 0px 0px 60%;
 }
 
 #iphone {
     display: inline;
-    margin: 50px 0px 0px 65%;
+    margin: 50px 0px 0px 50%;
 }
 
 #gaming {
     display: inline;
-    margin: 50px 0px 0px 35%;
+    margin: 50px 0px 0px 30%;
 }
