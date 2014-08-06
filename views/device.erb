@@ -6,10 +6,10 @@
         <h4 class="modal-title" id="myModalLabel">Device Detail</h4>
       </div>
       <div class="modal-body">
-        <h4><%= device_name %> <button class="btn btn-danger btn-sm">Ban</button> <%= info "Hardware Address" %></h4>
-        <p>Signal Strength: <%= badge signal_strength %> <%= case signal_strength when :green then "Excellent" when :yellow then "Fair" when :red then "Poor" end %><%= info("This is good") %></p>
-        <p>Data Loss: <%= badge(if data_loss<2 then :green elsif data_loss<10 then :yellow else :red end)  %> <%= data_loss %>%<%= info("This is meh") %></p>
-        <p>Connection Latency: <%= badge(if ping<10 then :green elsif ping<40 then :yellow else :red end)  %> <%= ping %> miliseconds<%= info("This is bad") %></p>
+        <h4><%= device_name %> <button class="btn btn-danger btn-sm">Ban</button> <%= info "Hardware Address: A3-b4-14-97-C5-D7 <br> IP Address: 192.168.1.13 <br> Subnet mask: 255.255.255.0" :title=>"Device Information" %></h4>
+        <p>Signal Strength: <%= badge signal_strength %> <%= case signal_strength when :green then "Excellent" when :yellow then "Fair" when :red then "Poor" end %><%= info("This is a measure of the device's reception. Reception can be effected by obstacles between the device and router as well as distance from the router.") %></p>
+        <p>Data Loss: <%= badge(if data_loss<2 then :green elsif data_loss<10 then :yellow else :red end)  %> <%= data_loss %>%<%= info("This a measure of the percentage of data being lost between this device and the router. Data loss can cause problems for applications which require continuous connection such as streaming from youtube.") :title=>"Packet Loss" %></p>
+        <p>Connection Latency: <%= badge(if ping<10 then :green elsif ping<40 then :yellow else :red end)  %> <%= ping %> miliseconds<%= :title=>"Ping" info("This is a measure of how long it takes for a tiny packet of information to be sent from your device to the router and back. This is important for instance when playing an online game when you want your game to respond quickly after you click your mouse.") %></p>
         <hr>
         <p><input type="checkbox" onclick="alert('do something')" <%= 'checked' if parent_enabled %>> Enable Parental Controls <a href="/parental" class="btn btn-default" >Configure Parental Controls</a></p>
       </div>
