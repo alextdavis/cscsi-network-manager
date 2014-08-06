@@ -11,7 +11,7 @@
         <p>Data Loss: <%= badge(if data_loss<2 then :green elsif data_loss<10 then :yellow else :red end)  %> <%= data_loss %>%<%= info "This a measure of the percentage of data being lost between this device and the router. Data loss can cause problems for applications which require continuous connection such as streaming from youtube.", :title=>"Packet Loss" %></p>
         <p>Connection Latency: <%= badge(if ping<10 then :green elsif ping<40 then :yellow else :red end)  %> <%= ping %> miliseconds<%= info "This is a measure of how long it takes for a tiny packet of information to be sent from your device to the router and back. This is important for instance when playing an online game when you want your game to respond quickly after you click your mouse.", :title=>"Ping"  %></p>
         <hr>
-        <p><input type="checkbox" onclick="alert('do something')" <%= 'checked' if parent_enabled %>> Enable Parental Controls <a href="/parental" class="btn btn-default" >Configure Parental Controls</a></p>
+        <p><input type="checkbox" <%= 'checked' if parent_enabled %>> Enable Parental Controls <a href="/parental" class="btn btn-default" >Configure Parental Controls</a></p>
       </div>
     </div>
   </div>

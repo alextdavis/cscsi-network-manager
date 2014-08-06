@@ -17,13 +17,13 @@
           <div style="padding-left:100px; min-height: 200px">
             <div class="tab-content">
               <div class="tab-pane active" id="a">
-                <p>Network Name: <input type="text" name="networkname" value="<%= network_name %>"><%= info "gardy" %></p>
+                <p>Network Name: <input type="text" name="networkname" value="<%= network_name %>"><%= info "This is the name that is broadcast to nearby devices, and is used to identify your network when you want to connect to it.", :title => "SSID" %></p>
 
                 <p>Status Alerts: <em>None</em></p>
 
-                <p>Download Speed: <span class="speed" hidden><%= speed_down %> Mb/s</span> <%= info "download speed" %></p>
+                <p>Download Speed: <span class="speed" hidden><%= speed_down %> Mb/s (<code>b</code> for bits), or <%= speed_down/8.0 %> MB/s (<code>B</code> for Bytes)</span> <%= info "This measures how fast your router's connection to the internet is when receiving data. Internet service providers usually advertize in bits (Mb or Kb), but bytes (MB or KB) are a more useful metric in practice. 1 byte = 8 bits.", :title => "Download Speed" %></p>
 
-                <p>Upload Speed: <span class="speed" hidden><%= speed_up %> Mb/s</span> <%= info "upload speed" %></p>
+                <p>Upload Speed: <span class="speed" hidden><%= speed_up %> Mb/s (<code>b</code> for bits), or <%= speed_up/8.0 %> MB/s (<code>B</code> for Bytes)</span> <%= info "This measures how fast your router's connection to the internet is when sending data. Internet service providers usually advertize in bits (Mb or Kb), but bytes (MB or KB) are a more useful metric in practice. 1 byte = 8 bits.", :title => "Upload Speed" %></p>
                 <button class="btn btn-default" onclick="$('.speed').show()">Start Speed Test</button>
               </div>
               <div class="tab-pane" id="b">
@@ -37,14 +37,11 @@
                     you can
                     always downgrade later.</p>
 
-                  <!--<form action="" method="post">-->
                     <select name="type">
                       <option>Best (WPA/WPA2 Personal)</option>
                       <option>Old (WEP)</option>
                       <option>None</option>
                     </select>
-                    <input type="button" class="btn btn-success" value="Save">
-                  <!--</form>-->
                 </div>
               </div>
               <div class="tab-pane" id="c">
