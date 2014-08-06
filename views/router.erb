@@ -12,8 +12,9 @@
             <li class="active"><a href="#a" data-toggle="tab">Status</a></li>
             <li><a href="#b" data-toggle="tab">Security</a></li>
             <li><a href="#c" data-toggle="tab">Ban List</a></li>
+            <li><a href="#d" data-toggle="tab">Parental<br> Controls</a></li>
           </ul>
-          <div style="padding-left:100px">
+          <div style="padding-left:100px; min-height: 200px">
             <div class="tab-content">
               <div class="tab-pane active" id="a">
                 <p>Network Name: <input type="text" name="networkname" value="<%= network_name %>"><%= info "gardy" %></p>
@@ -75,6 +76,9 @@
                   </tr>
                   </tbody>
                 </table>
+              </div>
+              <div class="tab-pane" id="d">
+                <%= partial :parental %>
               </div>
             </div>
           </div>
